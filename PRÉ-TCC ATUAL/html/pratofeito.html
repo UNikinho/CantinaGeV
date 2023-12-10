@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/pratofeito1.css" />
+    <link rel="icon" href="../img/icon05.png" />
+    <title>Prato Feito</title>
+</head>
+
+<!--menu aqui-->
+<body>
+    <header class="header">
+        <a class="logo"></a>
+        <a href="home.html"><img src="../img/logogvcerta.png" alt="logo" class="logo" id="imgLogo"></a>
+        <nav class="navbar">
+            <a href="cardapio.php" style="--i:2;">Cardápio</a>
+            <a href="pratofeito.html" style="--i:3;" >Prato Feito</a>
+                <a href="sobrenos.html" style="--i:1;">Sobre nós</a>
+                <a href="sugestoes.html" style="--i:2;">Sugestão</a>
+            </nav>
+        </nav>
+        <div class="menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+    <!--final do menu aqui-->
+
+    <h1 id="fora">Cardápio Prático</h1>
+    <div class="quadro-grande">
+        <div class="petiscos-container">
+            <div class="petisco">
+                <img src="../img/imgalmoco.jpg" alt="Petisco 1">
+                <h2>Almoços</h2>
+
+                <select id="checklist">
+                    <option value="0">Selecione uma opção</option>
+                    <option value="1">Principais</option>
+                    <option value="2">Mistura</option>
+                    <option value="3">Acompanhamento</option>
+                    <option value="4">Salada</option>
+                </select>
+
+                <div id="checklist-options" style="display: none;">
+                    <div class="option" data-value="1">
+                        <input type="checkbox" id="item1"> <label for="item1">Item 1</label>
+                    </div>
+                    <div class="option" data-value="1">
+                        <input type="checkbox" id="item2"> <label for="item2">Item 2</label>
+                    </div>
+                    <div class="option" data-value="1">
+                        <input type="checkbox" id="item3"> <label for="item3">Item 3</label>
+                    </div>
+                </div>
+
+                <div id="checklist-options2" style="display: none;">
+                    <div class="option" data-value="2">
+                        <input type="checkbox" id="item4"> <label for="item4">Item 4</label>
+                    </div>
+                    <div class="option" data-value="2">
+                        <input type="checkbox" id="item5"> <label for="item5">Item 5</label>
+                    </div>
+                    <div class="option" data-value="2">
+                        <input type="checkbox" id="item6"> <label for="item6">Item 6</label>
+                    </div>
+                </div>
+
+                <div id="checklist-options3" style="display: none;">
+                    <div class="option" data-value="3">
+                        <input type="checkbox" id="item7"> <label for="item7">Item 7</label>
+                    </div>
+                    <div class="option" data-value="3">
+                        <input type="checkbox" id="item8"> <label for="item8">Item 8</label>
+                    </div>
+                    <div class="option" data-value="3">
+                        <input type="checkbox" id="item9"> <label for="item9">Item 9</label>
+                    </div>
+                </div>
+
+                <div id="checklist-options4" style="display: none;">
+                    <div class="option" data-value="4">
+                        <input type="checkbox" id="item10"> <label for="item10">Item 10</label>
+                    </div>
+                    <div class="option" data-value="4">
+                        <input type="checkbox" id="item11"> <label for="item11">Item 11</label>
+                    </div>
+                    <div class="option" data-value="4">
+                        <input type="checkbox" id="item12"> <label for="item12">Item 12</label>
+                    </div>
+                </div>
+
+                <p>Preço: R$ XX,XX</p>
+                <button class="comprar-btn">Comprar</button>
+            </div>
+
+            <div class="petisco">
+                <img src="../img/imgsucos.jpg" alt="Petisco 2">
+                <h2>Sucos</h2>
+
+                <select id="checklist2">
+                    <option value="0">Selecione uma opção</option>
+                    <option value="1">Principais</option>
+                    <option value="2">Mistura</option>
+                    <option value="3">Acompanhamento</option>
+                    <option value="4">Salada</option>
+                </select>
+
+                <div id="checklist-options5" style="display: none;">
+                    <div class="option" data-value="1">
+                        <input type="checkbox" id="item13"> <label for="item13">Item 1</label>
+                    </div>
+                    <div class="option" data-value="1">
+                        <input type="checkbox" id="item14"> <label for="item14">Item 2</label>
+                    </div>
+                    <div class="option" data-value="1">
+                        <input type="checkbox" id="item15"> <label for="item15">Item 3</label>
+                    </div>
+                </div>
+
+                <div id="checklist-options6" style="display: none;">
+                    <div class="option" data-value="2">
+                        <input type="checkbox" id="item16"> <label for="item16">Item 4</label>
+                    </div>
+                    <div class="option" data-value="2">
+                        <input type="checkbox" id="item17"> <label for="item17">Item 5</label>
+                    </div>
+                    <div class="option" data-value="2">
+                        <input type="checkbox" id="item18"> <label for="item18">Item 6</label>
+                    </div>
+                </div>
+
+                <div id="checklist-options7" style="display: none;">
+                    <div class="option" data-value="3">
+                        <input type="checkbox" id="item19"> <label for="item19">Item 7</label>
+                    </div>
+                    <div class="option" data-value="3">
+                        <input type="checkbox" id="item20"> <label for="item20">Item 8</label>
+                    </div>
+                    <div class="option" data-value="3">
+                        <input type="checkbox" id="item21"> <label for="item21">Item 9</label>
+                    </div>
+                </div>
+
+                <div id="checklist-options8" style="display: none;">
+                    <div class="option" data-value="4">
+                        <input type="checkbox" id="item22"> <label for="item22">Item 10</label>
+                    </div>
+                    <div class="option" data-value="4">
+                        <input type="checkbox" id="item23"> <label for="item23">Item 11</label>
+                    </div>
+                    <div class="option" data-value="4">
+                        <input type="checkbox" id="item24"> <label for="item24">Item 12</label>
+                    </div>
+                </div>
+
+                
+                
+                <p>Preço: R$ XX,XX</p>
+                <button class="comprar-btn">Comprar</button>
+            </div>
+
+            <div class="petisco">
+                <img src="../img/imgsobremesas.jpg" alt="Petisco 3">
+                <h2>Sobremesas</h2>
+
+                <select id="checklist3">
+                    <option value="0">Selecione uma opção</option>
+                    <option value="1">Principais</option>
+                    <option value="2">Mistura</option>
+                    <option value="3">Acompanhamento</option>
+                    <option value="4">Salada</option>
+                </select>
+
+                <div id="checklist-options9" style="display: none;">
+                    <div class="option" data-value="1">
+                        <input type="checkbox" id="item25"> <label for="item25">Item 1</label>
+                    </div>
+                    <div class="option" data-value="1">
+                        <input type="checkbox" id="item26"> <label for="item26">Item 2</label>
+                    </div>
+                    <div class="option" data-value="1">
+                        <input type="checkbox" id="item27"> <label for="item27">Item 3</label>
+                    </div>
+                </div>
+
+                <div id="checklist-options10" style="display: none;">
+                    <div class="option" data-value="2">
+                        <input type="checkbox" id="item28"> <label for="item28">Item 4</label>
+                    </div>
+                    <div class="option" data-value="2">
+                        <input type="checkbox" id="item29"> <label for="item29">Item 5</label>
+                    </div>
+                    <div class="option" data-value="2">
+                        <input type="checkbox" id="item30"> <label for="item30">Item 6</label>
+                    </div>
+                </div>
+
+                <div id="checklist-options11" style="display: none;">
+                    <div class="option" data-value="3">
+                        <input type="checkbox" id="item31"> <label for="item31">Item 7</label>
+                    </div>
+                    <div class="option" data-value="3">
+                        <input type="checkbox" id="item32"> <label for="item32">Item 8</label>
+                    </div>
+                    <div class="option" data-value="3">
+                        <input type="checkbox" id="item33"> <label for="item33">Item 9</label>
+                    </div>
+                </div>
+
+                <div id="checklist-options12" style="display: none;">
+                    <div class="option" data-value="4">
+                        <input type="checkbox" id="item34"> <label for="item34">Item 10</label>
+                    </div>
+                    <div class="option" data-value="4">
+                        <input type="checkbox" id="item35"> <label for="item35">Item 11</label>
+                    </div>
+                    <div class="option" data-value="4">
+                        <input type="checkbox" id="item36"> <label for="item36">Item 12</label>
+                    </div>
+                </div>
+
+                
+                <p>Preço: R$ XX,XX</p>
+                <button class="comprar-btn">Comprar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/pratofeito.js"></script>
+</body>
+
+
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+
+
+</html>

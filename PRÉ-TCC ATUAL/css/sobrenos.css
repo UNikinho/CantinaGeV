@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Acme', sans-serif;
+}
+
+
+/* menu*/
+#imgLogo{
+    position: absolute;
+    top: 10px;
+    left: 95px;
+    width: 10%; /* Ajuste o valor conforme necessário */
+    max-width: 100px; /* Defina um valor máximo conforme necessário */
+}
+
+.logo{
+    font-size: 25px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Agora centraliza os itens horizontalmente */
+    top: -20px;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    z-index: 100;
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    }
+    
+
+    .navbar a {
+        padding-top: 1.5rem;
+        font-size: 1.5rem; /* Ajuste o tamanho da fonte conforme necessário */
+        color: #000;
+        text-decoration: none;
+        font-weight: 500;
+        margin-right: 35px; /* Ajuste o valor da margem conforme necessário */
+        transition: .3s;
+        opacity: 0;
+        animation: slideTop .5s ease forwards;
+        animation-delay: calc(.2s * var(--i));
+    }
+    .navbar a + a {
+        margin-left: 10px; /* Ajuste o valor da margem conforme necessário */
+    }
+
+.navbar a:hover,
+.navbar a.active {
+    color: #e89e00;
+}
+
+/*Parte Formatação*/
+
+body {
+    background-image: url('../img/fundo_sobrenos.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+    .titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7vw; /* Ajuste o valor conforme necessário */
+    font-size: 35px;
+    font-family: 'Acme', sans-serif;
+}
+.titulo h1 span {
+    color: #e89e00;
+}
+
+.breve-hist {
+    background-color: rgb(218, 218, 218);
+    margin: 0 auto;
+    box-shadow: 0 0 10px gray;
+    box-shadow: 15px 15px 10px gray;
+    max-height: 600px;
+    max-width: 800px;
+    margin-top: -1px; /* Ajuste o valor para movê-lo para cima */
+    overflow: hidden;
+    position: relative;
+}
+
+.breve-hist img {
+    float: left;
+    margin-top: 13px;
+    margin-left: 1%;
+    margin: 1%;
+    border-radius: 150px;
+    border: solid 2px #c8742b;
+    height: 20vw;
+    width: 25vw;
+}
+
+.breve-hist p {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin: 3%;
+    color: black;
+
+    font-size: 20px;
+    text-align: justify;
+    font-family: 'Acme', sans-serif;
+}
+
+.breve-hist h2{
+    margin-top: 3%;
+    text-align: center;
+    font-size: 40px;
+    color: #c8742b;
+    font-family: 'Acme', sans-serif;
+}
+
+/** carrossel de imagem **/
+  .container-slider {
+    display: flex;
+    align-self: center;
+    width: 100%;
+    height: 30vw;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container-images {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+  }
+  
+  .slider {
+    opacity: 0;
+    transition: opacity .2s;
+    position: absolute;
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .on {
+    opacity: 1;
+  }
+  
+  #prev-button, #next-button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  #prev-button img, #next-button img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  #prev-button {
+    transform: rotate(180deg);
+  }
+
+/* Media query para esconder a barra de navegação no início */
+@media (max-width: 785px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        gap: -10px;
+        transition: 0.3s;
+    }
+
+    .navbar.ativo {
+        display: flex;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .menu.ativo .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu.ativo .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/* Animações */
+
+/* HEYFRAMES ANIMATION */
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes floatImage{
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-24px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,157 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Tsukimi+Rounded&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tsukimi Rounded', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    }
+    
+
+.navbar a {
+    padding-top: 1.5rem;
+    font-size: 1.5rem;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 10px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+.navbar a + a {
+    margin-left: 10px;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #c8742b;
+}
+
+body {
+    background-color:#fcf6e0;
+    margin: 0;
+    padding: 0;
+}
+
+.text{
+    color: #c8742b;
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fcf6e0;
+    box-shadow: 0 0 10px #c8742b;
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    color: #c8742b;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+select, input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #000000;
+    border-radius: 3px;
+}
+
+button[type="submit"] {
+    background-color: #c8742b;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Estilos para os campos de pagamento específicos */
+#cartao-details,
+#pix-details,
+#dinheiro-details {
+    display: none;
+}
+
+/* Estilo para o preço total */
+#total-price {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Media query para telas menores (responsividade) */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
+
+/* Resto do seu código CSS aqui */
+
+.center-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Altura mínima igual à altura da tela */
+}
+
+/* Media query para telas menores (responsividade) */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

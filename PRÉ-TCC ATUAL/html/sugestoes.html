@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/sugestoes.css   " />
+    <link rel="icon" href="../img/icon03.png" />
+    <title>Sugestão</title>
+</head>
+
+<body>
+    <header class="header">
+        <a class="logo"></a>
+        <a href="home.html"><img src="../img/logogvcerta.png" alt="logo" class="logo" id="imgLogo"></a>
+        <nav class="navbar">
+            <a href="cardapio.php" style="--i:2;">Cardápio</a>
+            <a href="pratofeito.html" style="--i:3;">Prato Feito</a>
+                <a href="sobrenos.html" style="--i:1;">Sobre nós</a>
+                <a href="sugestoes.html" style="--i:2;">Sugestão</a>
+            </nav>
+        </nav>
+        <div class="menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+    <head>
+
+    <div class="titulo">
+        <h1>QUEREMOS OUVIR <span>VOCÊ</span></h1>
+    </div>
+   
+   <!--caixa-->
+    <main class="principal">
+        <div class="input-container">
+            <form method="post" action="../enviar_email.php">
+                <input type="text" name="nome" class="inputnome" placeholder="Insira Seu Nome"><br>
+                <input type="email" name="email" class="inputemail" placeholder="Insira Seu Email"><br>
+                <input type="text" name="assunto" class="inputassunto" placeholder="Insira o Assunto"><br>
+                <input type="submit" name="enviar" class="submit">
+                <a href="https://www.dialogo.com.br/politica-de-privacidade">Política de Privacidade</a>
+            </form>
+            <textarea name="assunto" id="assunto" cols="30" rows="10" placeholder="Sua Mensagem"></textarea>
+        </div>
+
+        
+        <p>Na <span>Cantina G&V</span>, valorizamos a sua opinião.</p>
+        <p>Queremos tornar sua experiência ainda melhor e, para isso,
+            contamos com suas <span>sugestões </span> e <span>ideias.</span></p>
+    </main>
+    <script src="../js/sugestoes.js"></script>
+</body>
+
+</html>
